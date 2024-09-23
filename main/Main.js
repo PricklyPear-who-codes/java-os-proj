@@ -10,14 +10,14 @@ public class Main {
     os.setUndecorated(true);
     os.setLayout(null);
 
-    JButton home = new JButton("Files");
-    home.setBounds(0, (1080/2)-30, 50, 50);
-    home.setBackground(Color.BLACK);
-    home.setForeground(Color.WHITE);
-    home.setFocusPainted(false);
-    home.setBorder(null);
+    JButton fileApp = new JButton("Files");
+    fileApp.setBounds(50, (1080/2)-30, 50, 50);
+    fileApp.setBackground(Color.BLACK);
+    fileApp.setForeground(Color.WHITE);
+    fileApp.setFocusPainted(false);
+    fileApp.setBorder(null);
 
-    home.addActionListener(new ActionListener() {
+    fileApp.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         ImageIcon filesImage = new ImageIcon("src/files icon.png");
         final JFrame files = new JFrame("Files");
@@ -25,12 +25,13 @@ public class Main {
         files.setSize(500, 500);
         files.setLayout(null);
         files.getContentPane().setBackground(Color.BLACK);
+      
         files.setVisible(true);
       }
     });
-    
-    os.add(home);
-    
+
+    os.add(fileApp);
+
     os.setVisible(true);
   }
 }
